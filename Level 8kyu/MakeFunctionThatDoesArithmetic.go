@@ -13,6 +13,8 @@ func Arithmetic(a int, b int, operator string) int {
 		return a - b
 	case strings.ToLower(operator) == "multiply":
 		return a * b
+	case b == 0:
+		return 0
 	case strings.ToLower(operator) == "divide":
 		return a / b
 	default:
@@ -21,6 +23,6 @@ func Arithmetic(a int, b int, operator string) int {
 
 }
 func main() {
-	fmt.Println(strings.ToLower("ADD"))
-	fmt.Println(Arithmetic(5, 2, "Add"))
+	fmt.Println(Arithmetic(5, 5, "divide"))
 }
+
